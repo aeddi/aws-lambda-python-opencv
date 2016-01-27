@@ -10,9 +10,9 @@ This is a simple script that build a deployement package including OpenCV compat
 
 ## Module building
 ### Option 1: with an existing instance
- - Download the repo `wget https://github.com/Plastic-1/aws-lambda-python-opencv/archive/master.zip`
-  - Unzip the archive `unzip master.zip`
-   - Launch the script `cd aws-lambda-python-opencv-master && ./build.sh`
+- Download the repo `wget https://github.com/Plastic-1/aws-lambda-python-opencv/archive/master.zip`
+- Unzip the archive `unzip master.zip`
+- Launch the script `cd aws-lambda-python-opencv-master && ./build.sh`
 
 ### Option 2: without an existing instance
 On the EC2 console, launch a new instance with:
