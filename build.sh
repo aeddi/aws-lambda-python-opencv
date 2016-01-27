@@ -22,6 +22,8 @@ cp -rf build/lib64/python2.7/site-packages/numpy lambda-package
 		-D WITH_IPP=ON				\
 		-D WITH_V4L=ON				\
 		-D ENABLE_AVX=ON			\
+		-D ENABLE_SSSE3=ON			\
+		-D ENABLE_SSE41=ON			\
 		-D ENABLE_SSE42=ON			\
 		-D ENABLE_POPCNT=ON			\
 		-D ENABLE_FAST_MATH=ON			\
