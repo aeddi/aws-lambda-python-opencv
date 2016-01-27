@@ -3,10 +3,10 @@
 # Setting up build env
 sudo yum update -y
 sudo yum install -y git cmake gcc-c++ gcc python-devel chrpath
-mkdir lambda-package build
+mkdir lambda-package lambda-package/cv2 build build/numpy
 
 # Build numpy
-pip install --install-option="--prefix=$PWD/build" numpy
+pip install --install-option="--prefix=$PWD/build/numpy" numpy
 cp -rf build/lib64/python2.7/site-packages/numpy lambda-package
 
 # Build OpenCV 3.1
@@ -30,12 +30,13 @@ cp -rf build/lib64/python2.7/site-packages/numpy lambda-package
 		.
 	make
 )
-mkdir lambda-package/cv2
-cp -L build/opencv/lib/{cv2.so,*.so.3.1} lambda-package/cv2
+cp build/opencv/lib/cv2.so lambda-package/cv2/__init__.so
+cp -L build/opencv/lib/*.so.3.1 lambda-package/cv2
 strip --strip-all lambda-package/cv2/*
-chrpath -r '$ORIGIN' lambda-package/cv2/cv2.so
-cp ressources/__init__.py lambda-package/cv2
+chrpath -r '$ORIGIN' lambda-package/cv2/__init__.so
+touch lambda-package/cv2/__init__.py
 
 # Copy template function and zip package
-cp ressources/template.py lambda-package/lambda_function.py
-zip -r lambda-package.zip lambda-package/*
+cp template.py lambda-package/lambda_function.py
+cd lambda-package
+zip -r ../lambda-package.zip *
