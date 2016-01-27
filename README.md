@@ -36,5 +36,5 @@ su -c './build.sh' ec2-user
 aws s3 cp lambda-package.zip s3://<my-target-bucket>
 shutdown -h now
 ```
-- Replace *<my-target-bucket>* by a bucket or your choice
+- Replace *my-target-bucket* by a bucket or your choice
 - Less than 30 min later the instance will be terminated and the archive will be available on your bucket
