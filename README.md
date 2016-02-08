@@ -22,7 +22,6 @@ On the EC2 console, launch a new instance with:
 - Paste the script below in the user data text field
 ```sh
 #!/bin/bash
-
 yum update -y
 yum install -y git cmake gcc-c++ gcc python-devel chrpath
 
