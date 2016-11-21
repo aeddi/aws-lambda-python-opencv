@@ -3,7 +3,7 @@
 # Setting up build env
 sudo yum update -y
 sudo yum install -y git cmake gcc-c++ gcc python-devel chrpath
-mkdir lambda-package lambda-package/cv2 build build/numpy
+mkdir -p lambda-package/cv2 build/numpy
 
 # Build numpy
 pip install --install-option="--prefix=$PWD/build/numpy" numpy
