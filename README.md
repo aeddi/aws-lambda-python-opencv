@@ -2,7 +2,7 @@
 
 <p align="center">
 	<img src="http://i.imgur.com/70rGBsz.gif" alt="Simple Mustache Service demo"/><br>
-	<i><b>Simple Mustache Service</b> is an AWS Lambda demo that use this module</i>
+	<i><b>Simple Mustache Service</b> is an AWS Lambda demo that uses this module</i>
 </p>
 
 ## Description
