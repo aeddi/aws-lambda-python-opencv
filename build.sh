@@ -30,10 +30,10 @@ cp -rf build/numpy/lib64/python2.7/site-packages/numpy lambda-package
 		-D BUILD_EXAMPLES=OFF					\
 		-D PYTHON2_NUMPY_INCLUDE_DIRS="$NUMPY"	\
 		.
-	make
+	make -j`cat /proc/cpuinfo | grep MHz | wc -l`
 )
 cp build/opencv/lib/cv2.so lambda-package/cv2/__init__.so
-cp -L build/opencv/lib/*.so.3.1 lambda-package/cv2
+cp -L build/opencv/lib/*.so.3.2 lambda-package/cv2
 strip --strip-all lambda-package/cv2/*
 chrpath -r '$ORIGIN' lambda-package/cv2/__init__.so
 touch lambda-package/cv2/__init__.py
