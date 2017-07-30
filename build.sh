@@ -28,6 +28,8 @@ cp -rf build/numpy/lib64/python2.7/site-packages/numpy lambda-package
 		-D ENABLE_POPCNT=ON						\
 		-D ENABLE_FAST_MATH=ON					\
 		-D BUILD_EXAMPLES=OFF					\
+		-D BUILD_TESTS=OFF						\
+		-D BUILD_PERF_TESTS=OFF					\
 		-D PYTHON2_NUMPY_INCLUDE_DIRS="$NUMPY"	\
 		.
 	make -j`cat /proc/cpuinfo | grep MHz | wc -l`
