@@ -10,7 +10,7 @@ This is a simple script that builds a deployment package including OpenCV compat
 
 - Build duration: ~20 min on T2.micro / ~15 min on C4.2xlarge
 - Package size without haar cascades included: 26MB
-- OpenCV 3.1 by default but may work with newer
+- OpenCV 3.2 by default but may work with newer
 
 **Needs to be built on an Amazon Linux instance.**
 
